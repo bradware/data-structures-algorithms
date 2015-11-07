@@ -1,2 +1,2 @@
-# Data Structures & Algorithms
-A repository of fundamental data structures and algorithms implemented in Java. Each directory concetrates on a different data strucutre or algorithm. Every one was implemented using Java and tested through the JUnit framework.
+# Huffman Coding Tree
+Implementation of the [Huffman Coding Tree](https://en.wikipedia.org/wiki/Huffman_coding) in Java and tested through the JUnit framework. Includes building a frequency map, Huffman tree, and then the encode and decode functions.
