@@ -1,2 +1,2 @@
-# Data Structures & Algorithms
-A repository of fundamental data structures and algorithms implemented in Java. Each directory concetrates on a different data strucutre or algorithm. Every one was implemented using Java and tested through the JUnit framework.
+# Minimum Spanning Tree Algorithms
+Implementation of a [Minimum Spanning Tree](https://en.wikipedia.org/wiki/Minimum_spanning_tree) (MST) and also algorithms to construct a MST. Strategies implemented to find a MST included [Kruskals Algorithm](https://en.wikipedia.org/wiki/Kruskal%27s_algorithm), [Prim's Algorithm](https://en.wikipedia.org/wiki/Prim%27s_algorithm), and [Disjoint Sets](https://en.wikipedia.org/wiki/Disjoint_sets). Everything was built using Java and tested through the JUnit framework. 
