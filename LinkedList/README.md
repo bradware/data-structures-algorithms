@@ -1,2 +1,2 @@
-# Data Structures & Algorithms
-A repository of fundamental data structures and algorithms implemented in Java. Each directory concetrates on a different data strucutre or algorithm. Every one was implemented using Java and tested through the JUnit framework.
+# Linked List
+Implementation of a doubly [linked list](https://en.wikipedia.org/wiki/Doubly_linked_list) with a head and tail pointer. Implemented with Java and tested extensively through the JUnit framework. The linked list is comprised of a Node wrapper class that stores a generic piece of data (T), next, and prev pointers.  
