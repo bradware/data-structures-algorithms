@@ -1,2 +1,2 @@
-# Data Structures & Algorithms
-A repository of fundamental data structures and algorithms implemented in Java. Each directory concetrates on a different data strucutre or algorithm. Every one was implemented using Java and tested through the JUnit framework.
+# Graph Search/Traversal Algorithms
+Implementation of graph search/traversal algorithms including [Depth-First Search](https://en.wikipedia.org/wiki/Depth-first_search) (DFS), [Breadth-First Search](https://en.wikipedia.org/wiki/Breadth-first_search), and [Dijkstra's Algorithm](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm). 
