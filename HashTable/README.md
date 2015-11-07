@@ -1,2 +1,2 @@
-# Data Structures & Algorithms
-A repository of fundamental data structures and algorithms implemented in Java. Each directory concetrates on a different data strucutre or algorithm. Every one was implemented using Java and tested through the JUnit framework.
+# HashTable
+Implementation of a hash table backed by an array. Collisions were handled through [linear probing](https://en.wikipedia.org/wiki/Linear_probing)/[open addressing](https://en.wikipedia.org/wiki/Open_addressing).
