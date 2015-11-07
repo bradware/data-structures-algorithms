@@ -1,0 +1,126 @@
+/**
+ * A class providing the storage for a basic face
+ * @author David M. Smith
+ */
+package System;
+
+import User.Model;
+import java.awt.Dimension;
+import java.awt.Graphics;
+import java.awt.Image;
+import java.awt.event.*;
+import javax.swing.JPanel;
+
+/**
+ * display panel for the Model
+ */
+public class MyPanel extends JPanel implements Runnable,
+        MouseListener,
+        MouseMotionListener {
+
+	private static final long serialVersionUID = 1L;
+    /** whether the solution is running */
+    public boolean isRunning;
+    /** the solution */
+    private Model myModel;
+    Image image = null;
+
+//------------------------------------------------------------------
+//
+    /**
+     *   basic constructor
+     * @param d the screen size
+     * @param c the solution
+     */
+    public MyPanel(Dimension d, Model c) {
+        myModel = c;
+        addMouseListener(this);
+        addMouseMotionListener(this);
+        image = ImageMaker.createImage();
+/*
+ * alternative if you want to read in an image
+ * from the resource subdirectory
+ */
+//        Class metaObject = this.getClass();
+//        URL url = metaObject.getResource("/OTSP/resource/Watermark.gif");
+//        if(url != null) {
+//            ImageIcon imageIcon = new ImageIcon(url);
+//            image = imageIcon.getImage();
+//        }
+    }
+
+    /**
+     *   stop the animation.
+     */
+    public void stop() {
+        isRunning = false;
+    }
+
+    /**
+     *   run the animation.
+     */
+    @Override
+    public void run() {
+        do {
+            myModel.doTick();
+            repaint();
+            try {
+                Thread.sleep((int) (1000 * Model.DT));
+            } // millisecs
+            catch (InterruptedException e) {
+            }
+        } while (isRunning);
+    }
+
+    /**
+     *   repaint the display
+     */
+    /**
+     * blank fill the screen then paint it
+     * @param g the graphic environment
+     */
+    @Override
+    public void paintComponent(Graphics g) {
+
+        Dimension d = getSize();
+        g.drawImage(image, 0, 0, getWidth(), getHeight(), this);
+        myModel.doPaint(g, d);
+    }
+
+    @Override
+    public void mouseClicked(MouseEvent e) {
+        myModel.clicked(e);
+    }
+
+    @Override
+    public void mouseEntered(MouseEvent e) {
+        myModel.entered(e);
+    }
+
+    @Override
+    public void mouseExited(MouseEvent e) {
+        myModel.exited(e);
+    }
+
+    @Override
+    public void mouseReleased(MouseEvent e) {
+        myModel.released(e);
+    }
+
+    @Override
+    public void mousePressed(MouseEvent e) {
+        myModel.pressed(e);
+    }
+
+    @Override
+    public void mouseDragged(MouseEvent e) {
+        myModel.dragged(e);
+    }
+
+    @Override
+    public void mouseMoved(MouseEvent e) {
+        myModel.moved(e);
+    }
+}
+
+
